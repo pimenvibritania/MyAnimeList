@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Мой список аниме</string>
+    <string name="welcome">Добро пожаловать в</string>
+    <string name="description">Это приложение было выполнено для выполнения среднего экзамена по курсу «Практическое мобильное программирование»</string>
+    <string name="name1">название : </string>
+    <string name="name2">Пирман Абдурохман</string>
+    <string name="no1">Число : </string>
+    <string name="no2">1157050127</string>
+    <string name="beranda">Главная</string>
+</resources>

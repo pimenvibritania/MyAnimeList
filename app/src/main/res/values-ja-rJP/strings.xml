@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">マイアミリスト</string>
+    <string name="welcome">ようこそ !</string>
+    <string name="description">このアプリケーションは、モバイルプログラミング実習</string>
+    <string name="name1">名前 : </string>
+    <string name="name2">ピルマン・アブドゥロフマン</string>
+    <string name="no1">番号 : </string>
+    <string name="no2">1157050127</string>
+    <string name="beranda">ホームページ</string>
+</resources>

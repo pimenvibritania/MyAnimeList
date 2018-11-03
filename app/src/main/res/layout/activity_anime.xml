@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.demotxt.myapp.myapplication.activities.AnimeActivity"
-    android:background="#303030">
+>
 
     <android.support.design.widget.AppBarLayout
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
@@ -112,7 +112,7 @@
 
 
         <TextView
-            android:textColor="#fff"
+            android:textColor="@android:color/black"
             android:text="Anime Description"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Anime List</string>
+    <string name="welcome">ยินดีต้อนรับสู่</string>
+    <string name="description">แอ็พพลิเคชันนี้ทำเพื่อตอบสนองการสอบมิดไนท์ของหลักสูตรการเขียนโปรแกรมมือถือในทางปฏิบัติ</string>
+    <string name="name1">ชื่อ : </string>
+    <string name="name2">Pirman Abdurohman</string>
+    <string name="no1">จำนวน : </string>
+    <string name="no2">1157050127</string>
+    <string name="beranda">บ้าน</string>
+</resources>

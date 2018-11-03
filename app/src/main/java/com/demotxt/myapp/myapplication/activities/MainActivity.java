@@ -1,9 +1,12 @@
 package com.demotxt.myapp.myapplication.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -97,5 +100,35 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(myadapter);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+
+        int id = item.getItemId();
+
+        switch (id){
+
+            case R.id.profile:
+                Intent h = new Intent(getApplicationContext(), MyProfile.class);
+                startActivity(h);
+                break;
+            case R.id.language:
+                showChangeLanguageDialog();
+                break;
+
+        }
+
+        return  true;
+
+    }
+
+    private void showChangeLanguageDialog() {
     }
 }

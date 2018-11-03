@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Anime List</string>
+    <string name="welcome">Welcome To</string>
+    <string name="description">This application was made to fulfill the midterm exam of the Practical Mobile Programming course</string>
+    <string name="name1">Name : </string>
+    <string name="name2">Pirman Abdurohman</string>
+    <string name="no1">No : </string>
+    <string name="no2">1157050127</string>
+    <string name="beranda">Home</string>
+</resources>
