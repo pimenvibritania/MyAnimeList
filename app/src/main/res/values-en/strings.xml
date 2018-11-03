@@ -7,5 +7,7 @@
     <string name="name2">Pirman Abdurohman</string>
     <string name="no1">No : </string>
     <string name="no2">1157050127</string>
-    <string name="beranda">Home</string>
+    <string name="beranda">View</string>
+    <string name="list">Seasonial Top Chart</string>
+
 </resources>

@@ -7,5 +7,7 @@
     <string name="name2">ピルマン・アブドゥロフマン</string>
     <string name="no1">番号 : </string>
     <string name="no2">1157050127</string>
-    <string name="beranda">ホームページ</string>
+    <string name="beranda">見る</string>
+    <string name="list">季節のトップチャート</string>
+
 </resources>

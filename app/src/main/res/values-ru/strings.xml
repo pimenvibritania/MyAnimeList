@@ -7,5 +7,7 @@
     <string name="name2">Пирман Абдурохман</string>
     <string name="no1">Число : </string>
     <string name="no2">1157050127</string>
-    <string name="beranda">Главная</string>
+    <string name="beranda">Посмотреть</string>
+    <string name="list">Сезонная верхняя диаграмма</string>
+
 </resources>

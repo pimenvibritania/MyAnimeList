@@ -1,6 +1,11 @@
 package com.demotxt.myapp.myapplication.activities;
 
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,6 +19,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.demotxt.myapp.myapplication.R;
+import com.demotxt.myapp.myapplication.WelcomeActivity;
 import com.demotxt.myapp.myapplication.adapters.RecyclerViewAdapter;
 import com.demotxt.myapp.myapplication.model.Anime;
 
@@ -23,6 +29,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +43,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loadLocale();
         setContentView(R.layout.activity_main);
+
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(getResources().getString(R.string.app_name));
 
         lstAnime = new ArrayList<>() ;
         recyclerView = findViewById(R.id.recyclerviewid);
@@ -104,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
+        getMenuInflater().inflate(R.menu.menu2, menu);
         return true;
     }
 
@@ -115,9 +126,14 @@ public class MainActivity extends AppCompatActivity {
 
         switch (id){
 
-            case R.id.profile:
-                Intent h = new Intent(getApplicationContext(), MyProfile.class);
+            case R.id.home:
+                Intent h = new Intent(getApplicationContext(), WelcomeActivity.class);
                 startActivity(h);
+                break;
+
+            case R.id.profile:
+                Intent p = new Intent(getApplicationContext(), MyProfile.class);
+                startActivity(p);
                 break;
             case R.id.language:
                 showChangeLanguageDialog();
@@ -130,5 +146,56 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showChangeLanguageDialog() {
+        final String[] listItems = {"Indonesia", "English", "日本", "русский", "ไทย"};
+        AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+        mBuilder.setTitle("Choose Language...");
+        mBuilder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if (i == 0){
+                    setLocale("in");
+                    recreate();
+                }
+                else if (i == 1){
+                    setLocale("en");
+                    recreate();
+                }
+                else if (i == 2){
+                    setLocale("ja");
+                    recreate();
+                }
+                else if (i == 3){
+                    setLocale("ru");
+                    recreate();
+                }
+                else if (i == 4){
+                    setLocale("th");
+                    recreate();
+                }
+                dialogInterface.dismiss();
+            }
+        });
+        AlertDialog mDialog = mBuilder.create();
+        mDialog.show();
+
     }
+
+    private void setLocale(String lang) {
+        Locale locale = new Locale(lang);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+
+        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("My_Lang", lang);
+        editor.apply();
+    }
+
+    public void loadLocale(){
+        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        String language = prefs.getString("My_Lang", " ");
+        setLocale(language);
+    }
+
 }

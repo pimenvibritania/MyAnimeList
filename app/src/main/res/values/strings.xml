@@ -6,6 +6,7 @@
     <string name="name2">Pirman Abdurohman</string>
     <string name="no1">Nomor : </string>
     <string name="no2">1157050127</string>
-    <string name="beranda">Beranda</string>
+    <string name="beranda">Lihat</string>
+    <string name="list">Diagram Teratas Musiman</string>
 
 </resources>

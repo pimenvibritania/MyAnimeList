@@ -7,5 +7,7 @@
     <string name="name2">Pirman Abdurohman</string>
     <string name="no1">จำนวน : </string>
     <string name="no2">1157050127</string>
-    <string name="beranda">บ้าน</string>
+    <string name="beranda">ดู</string>
+    <string name="list">แผนภูมิด้านบนตามฤดูกาล</string>
+
 </resources>
