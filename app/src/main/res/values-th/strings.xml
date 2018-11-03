@@ -9,5 +9,8 @@
     <string name="no2">1157050127</string>
     <string name="beranda">ดู</string>
     <string name="list">แผนภูมิด้านบนตามฤดูกาล</string>
+    <string name="myprof">ประวัติของฉัน</string>
+    <string name="campus">Sunan Gunung Djati มหาวิทยาลัยอิสลามแห่งรัฐบันดุง</string>
+    <string name="city">Sukabumi เมือง, จังหวัดจาวาตะวันตก</string>
 
 </resources>

@@ -9,19 +9,30 @@
     android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="260dp">
+        android:layout_height="280dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="2600dp"
+            android:layout_height="280dp"
             android:background="@drawable/gradientbackground"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/prof"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="@string/myprof"
+                android:textColor="#fff"
+                android:textSize="21sp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="10dp"
                 android:src="@drawable/pimen" />
 
             <TextView
@@ -29,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:text="Pirman Abdurohman"
+                android:text="@string/name2"
                 android:textColor="#fff"
                 android:textSize="21sp"
                 android:textStyle="bold" />
@@ -86,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
                 android:textColor="@android:color/white"
-                android:text="085723660012"/>
+                android:text="+(62) 085723660012  "/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="25dp"
@@ -106,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
                 android:textColor="@android:color/white"
-                android:text="UIN SUNAN GUNUNG DJATI BANDUNG"/>
+                android:text="@string/campus"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="25dp"
@@ -126,7 +137,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
                 android:textColor="@android:color/white"
-                android:text="SUKABUMI CITY"/>
+                android:text="@string/city"/>
         </LinearLayout>
     </LinearLayout>
 
